@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<template
+        format="5"
+        revision="5"
+        name="Activity 快速列表"
+        description="Creates a new application settings activity that presents alternative layouts on handset and tablet-size screens."
+        minApi="11"
+        minBuildApi="11"
+        requireAppTheme="true"
+        category="Activity">
+
+    <dependency name="android-support-v4" revision="8"/>
+
+    <category value="Activity"/>
+    <formfactor value="Mobile"/>
+
+    <parameter
+            id="activityClass"
+            name="Activity 名称"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="ListActivity"
+			suggest="${layoutToActivity(activityLayoutName)}"
+			help="The name of the activity class to create"/>
+	<parameter
+		id="activityLayoutName"
+		name="布局名称(layout):"
+		type="string"
+		constraints="layout|unique|nonempty"
+		suggest="${activityToLayout(activityClass)}"
+		default="activity_list"
+		help="The name of the layout to create for the activity" />
+		
+	<parameter
+		id="beanName"
+		name="实体(Bean):"
+		type="string"
+		constraints="class|unique|nonempty"
+		suggest=""
+		default="Bean"
+		help="The name of the Bean to create for the Listactivity" />
+	
+	<parameter
+        id="isLauncher"
+        name="是否为启动activity?"
+        type="boolean"
+        default="false"
+        help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
+
+<parameter
+            id="packageName"
+            name="Package name"
+            type="string"
+            constraints="package"
+            default="com.mycompany.myapp"/>
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_settings_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl"/>
+    <execute file="recipe.xml.ftl"/>
+
+</template>
