@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<template
+        format="5"
+        revision="5"
+        name="RecyclerAdapter(继承自RecyclerView.ViewHolder)"
+        description="创建一个基于原生RecyclerView的方便Adapter">
+
+
+
+    <category value="Adapter(Marshon)"/>
+    <formfactor value="Mobile"/>
+
+    <parameter
+            id="adapterClass"
+            name="Adapter Name"
+            type="string"
+            constraints="class|unique|nonempty"
+            default="Adapter"
+            help="The name of the Adapter class to create"/>
+<!-- 
+    <parameter
+            id="activityTitle"
+            name="Title"
+            type="string"
+            constraints="nonempty"
+            default="Settings"
+            help="The name of the activity."/>
+			
+    <parameter
+            id="parentActivityClass"
+            name="Hierarchical Parent"
+            type="string"
+            constraints="activity|exists|empty"
+            default=""
+            help="The hierarchical parent activity, used to provide a default implementation for the 'Up' button"/>
+			-->
+    <parameter
+            id="beanClass"
+            name="Bean Class"
+            type="string"
+            constraints="class"
+            default="T"
+            help="The Bean class"/>
+
+    <parameter
+            id="viewHolder"
+            name="ViewHolder Class Name"
+            type="string"
+            constraints="class"
+            default="ViewHolder"
+            help="自定义的 ViewHolder 的名字"/>
+
+    <parameter
+            id="packageName"
+            name="Package name"
+            type="string"
+            constraints="package"
+            default="com.mycompany.myapp"/>
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>activity_fastlist.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl"/>
+    <execute file="recipe.xml.ftl"/>
+
+
+</template>

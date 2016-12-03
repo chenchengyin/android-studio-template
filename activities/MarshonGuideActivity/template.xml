@@ -1,17 +1,15 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <template
         format="5"
         revision="5"
-        name="Activity 快速列表"
+        name="Activity 引导页"
         description="Creates a new application settings activity that presents alternative layouts on handset and tablet-size screens."
         minApi="11"
         minBuildApi="11"
         requireAppTheme="true"
         category="Activity">
 
-    <dependency name="android-support-v4" revision="8"/>
-
-    <category value="Activity"/>
+    <category value="Activity(Marshon)"/>
     <formfactor value="Mobile"/>
 
     <parameter
@@ -19,37 +17,29 @@
             name="Activity 名称"
             type="string"
             constraints="class|unique|nonempty"
-            default="ListActivity"
-			suggest="${layoutToActivity(activityLayoutName)}"
+            default="SplashActivity"
+			suggest="${layoutToActivity(layoutName)}"
 			help="The name of the activity class to create"/>
 	<parameter
-		id="activityLayoutName"
+		id="layoutName"
 		name="布局名称(layout):"
 		type="string"
 		constraints="layout|unique|nonempty"
 		suggest="${activityToLayout(activityClass)}"
-		default="activity_list"
-		help="The name of the layout to create for the activity" />
-		
-	<parameter
-		id="beanName"
-		name="实体(Bean):"
-		type="string"
-		constraints="class|unique|nonempty"
-		suggest=""
-		default="Bean"
-		help="The name of the Bean to create for the Listactivity" />
+		default="activity_splash"
+		help="The name of the layout to create for the activity" />	
+	
 	
 	<parameter
         id="isLauncher"
         name="是否为启动activity?"
         type="boolean"
-        default="false"
+        default="true"
         help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
 
 <parameter
             id="packageName"
-            name="Package name"
+            name="包名"
             type="string"
             constraints="package"
             default="com.mycompany.myapp"/>
@@ -57,7 +47,7 @@
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
         <!-- default thumbnail is required -->
-        <thumb>activity_fastlist.png</thumb>
+        <thumb>template_blank_activity_pager.png</thumb>
     </thumbs>
 
     <globals file="globals.xml.ftl"/>

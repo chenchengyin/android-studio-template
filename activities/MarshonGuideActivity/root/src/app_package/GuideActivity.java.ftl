@@ -46,7 +46,6 @@ public class ${activityClass} extends AppCompatActivity {
         viewpager= (ViewPager) findViewById(R.id.viewpager);
 
 
-        //初始化所有View 状态
         guideadapter=new GuidePagerAdapter(imgs,this);
         viewpager.setAdapter(guideadapter);
         viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -90,20 +89,18 @@ public class ${activityClass} extends AppCompatActivity {
         initView();
     }
 
-    //马上进入程序
     private void gotoMainActivity() {
         if(handler!=null){
             handler.removeCallbacks(delayGoMain);
             handler=null;
         }
-        //跳转
+
         Intent intent = new Intent(${activityClass}.this, MainActivity.class);
         intent.putExtra("toupdate", true);
         startActivity(intent);
         finish();
     }
 
-    //轮播完,去到主页
     private void showGotoMainBtn(boolean show){
         if (show) {
             btn_enter.setVisibility(View.VISIBLE);
@@ -136,7 +133,7 @@ public class ${activityClass} extends AppCompatActivity {
 
     }
 
-    //延时任务
+
     private Runnable delayGoMain =new Runnable() {
         @Override
         public void run() {

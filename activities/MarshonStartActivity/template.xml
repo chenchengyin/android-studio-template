@@ -11,7 +11,7 @@
 
     <dependency name="android-support-v4" revision="8"/>
 
-    <category value="Activity"/>
+    <category value="Activity(Marshon)"/>
     <formfactor value="Mobile"/>
 
     <parameter

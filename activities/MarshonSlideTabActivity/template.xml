@@ -7,7 +7,7 @@
     minBuildApi="14"
     description="Creates a new activity with viewpager and tabs">
 
-    <category value="Activity" />
+    <category value="Activity(Marshon)" />
     <formfactor value="Mobile" />
 
     <parameter

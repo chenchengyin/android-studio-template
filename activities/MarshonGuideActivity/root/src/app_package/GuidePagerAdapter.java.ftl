@@ -6,11 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-/**
- * 作者：YourName on 2016/9/8 09:43
- * 邮箱：
- * 功能描述：引导页适配器
- */
+
 
 public class GuidePagerAdapter extends PagerAdapter {
 
