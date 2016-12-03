@@ -17,6 +17,9 @@
 	<instantiate from="root/src/app_package/MainActivity.java.ftl"
      	to="${escapeXmlAttribute(srcOut)}/${activityClass}.java" />
 
+	<instantiate from="root/src/app_package/MainFragmentPagerAdapter.java.ftl"
+     	to="${escapeXmlAttribute(srcOut)}/MainFragmentPagerAdapter.java" />
+
 	<instantiate from="root/src/app_package/SimpleFragment.java.ftl"
         to="${escapeXmlAttribute(srcOut)}/fragment/${fragmentClass}.java" />   
 		

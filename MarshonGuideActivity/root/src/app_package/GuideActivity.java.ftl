@@ -1,4 +1,4 @@
-package ${packageName}.guide;
+package ${packageName};
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,13 +13,15 @@ import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ImageView;
+import ${packageName}.GuidePagerAdapter;
 
 
 /**
- * ä½œè€…ï¼šMarshon.Chen on 2016/9/8 09:43
- * é‚®ç®±ï¼šitmarshon@163.com
- * åŠŸèƒ½æè¿°ï¼šå¼•å¯¼é¡µæ¨¡æ¿
+ * ×÷Õß£º your name on 2016/9/8 09:43
+ * ÓÊÏä£º
+ * ¹¦ÄÜÃèÊö£ºÒıµ¼Ò³Ä£°å
  */
 public class ${activityClass} extends AppCompatActivity {
 
@@ -44,8 +46,8 @@ public class ${activityClass} extends AppCompatActivity {
         viewpager= (ViewPager) findViewById(R.id.viewpager);
 
 
-        //åˆå§‹åŒ–æ‰€æœ‰View çŠ¶æ€
-        guideadapter=new GuidePagerAdapter();
+        //³õÊ¼»¯ËùÓĞView ×´Ì¬
+        guideadapter=new GuidePagerAdapter(imgs,this);
         viewpager.setAdapter(guideadapter);
         viewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -88,20 +90,20 @@ public class ${activityClass} extends AppCompatActivity {
         initView();
     }
 
-    //é©¬ä¸Šè¿›å…¥ç¨‹åº
+    //ÂíÉÏ½øÈë³ÌĞò
     private void gotoMainActivity() {
         if(handler!=null){
             handler.removeCallbacks(delayGoMain);
             handler=null;
         }
-        //è·³è½¬
+        //Ìø×ª
         Intent intent = new Intent(${activityClass}.this, MainActivity.class);
         intent.putExtra("toupdate", true);
         startActivity(intent);
         finish();
     }
 
-    //è½®æ’­å®Œ,å»åˆ°ä¸»é¡µ
+    //ÂÖ²¥Íê,È¥µ½Ö÷Ò³
     private void showGotoMainBtn(boolean show){
         if (show) {
             btn_enter.setVisibility(View.VISIBLE);
@@ -134,7 +136,7 @@ public class ${activityClass} extends AppCompatActivity {
 
     }
 
-    //å»¶æ—¶ä»»åŠ¡
+    //ÑÓÊ±ÈÎÎñ
     private Runnable delayGoMain =new Runnable() {
         @Override
         public void run() {
@@ -147,35 +149,6 @@ public class ${activityClass} extends AppCompatActivity {
         }
     };
 
-    //å¼•å¯¼é€‚é…å™¨
-    class GuidePagerAdapter extends PagerAdapter {
-
-        @Override
-        public int getCount() {
-            return imgs.length;
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view==object;
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            ImageView iv=new ImageView(${activityClass}.this);
-            ViewGroup.LayoutParams params=new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-            iv.setBackgroundResource(imgs[position]);
-            container.addView(iv,params);
-            return iv;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            if(object instanceof ImageView){
-                container.removeView((View) object);
-            }
-        }
-    }
 
 }
 

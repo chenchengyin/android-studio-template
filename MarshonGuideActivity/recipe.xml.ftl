@@ -4,7 +4,9 @@
 
 			 
 	<instantiate from="root/src/app_package/GuideActivity.java.ftl"
-     	to="${escapeXmlAttribute(srcOut)}/guide/${activityClass}.java" />	
+     	to="${escapeXmlAttribute(srcOut)}/${activityClass}.java" />
+	<instantiate from="root/src/app_package/GuidePagerAdapter.java.ftl"
+     	to="${escapeXmlAttribute(srcOut)}/GuidePagerAdapter.java" />	
 	<instantiate from="root/res/layout/activity_guide.xml.ftl"
 		to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
 		

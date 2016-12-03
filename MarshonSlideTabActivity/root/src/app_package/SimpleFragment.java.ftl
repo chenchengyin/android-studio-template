@@ -13,10 +13,11 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 
 /**
- * 作者：Marshon.Chen on 2016/9/8 09:43
- * 邮箱：itmarshon@163.com
- * 功能描述：slidingtab模板
+ * author�� on 2016/9/8 09:43
+ * email��
+ * desc��slidingtab 
  */
+
 public class ${fragmentClass} extends BaseFragment
 {
 

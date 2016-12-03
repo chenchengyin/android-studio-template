@@ -1,4 +1,4 @@
-package ${packageName}.start;
+package ${packageName};
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -7,8 +7,12 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 
-import ${packageName}.R;
+import android.view.WindowManager;
+import android.view.Window;
+
+
 
 /**
  * Created by Marshon.Chen on 2016/6/1.

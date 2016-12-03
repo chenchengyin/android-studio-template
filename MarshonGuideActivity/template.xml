@@ -47,7 +47,7 @@
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
         <!-- default thumbnail is required -->
-        <thumb>template_settings_activity.png</thumb>
+        <thumb>template_blank_activity_pager.png</thumb>
     </thumbs>
 
     <globals file="globals.xml.ftl"/>

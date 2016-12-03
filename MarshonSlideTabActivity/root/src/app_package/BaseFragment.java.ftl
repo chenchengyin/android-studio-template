@@ -10,11 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
-/**
- * 作者：Marshon.Chen on 2016/9/8 09:43
- * 邮箱：itmarshon@163.com
- * 功能描述：slidingtab模板
- */
+
 public abstract class BaseFragment extends Fragment{
     protected View rootView;
     protected Activity mActivity;

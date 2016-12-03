@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <template
         format="5"
         revision="5"
@@ -57,7 +57,7 @@
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
         <!-- default thumbnail is required -->
-        <thumb>template_settings_activity.png</thumb>
+        <thumb>activity_fastlist.png</thumb>
     </thumbs>
 
     <globals file="globals.xml.ftl"/>
