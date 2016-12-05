@@ -8,8 +8,8 @@
  ***[android-studio\plugins\android\lib\templates](www.baidu.com)***
  在这个目录下，有个activities目录，里面就是activity模板们所在目录。在深入了解和不断尝试，凝聚出楼主自定义的模板。在这分享和提供给大家使用。
  
-从github上下载后模板后，将目录里的MarshonActivity 文件夹拷贝到
-Android Studio根目录\plugins\android\lib\templates\ 目录下。重启Android Studio，注意:如果已有下载之前版本,请删除后再拷贝！请删除后再拷贝！请删除后再拷贝！创建：new class方法，new ->Activity（Marshon）->Activity 快速列表
+从github上下载后模板后，将目录里的文件夹拷贝到
+Android Studio根目录\plugins\android\lib\templates\ 目录下。重启Android Studio，**注意：**如果已有下载之前版本,请删除后再拷贝！请删除后再拷贝！请删除后再拷贝！创建：new class方法，new ->Activity（Marshon）->Activity 快速列表
 ![这里写图片描述](http://img.blog.csdn.net/20161108180245093)
 
 
