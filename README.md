@@ -41,4 +41,5 @@ Android Studio根目录\plugins\android\lib\templates\ 目录下。重启Android
 
 
 ## 总结 ##
+有兴趣的童靴可以一起加入到模板工程来，欢迎加入QQ群：*243573999*。
 Thks！
