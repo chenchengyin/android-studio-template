@@ -22,7 +22,9 @@ Android Studio根目录\plugins\android\lib\templates\ 目录下。重启Android
 更新
 -
 
-1.1 更新 **快速Adapter（2016/12/04 02:26）** 
+1.2 更新 **新增MVP模板（2017/06/01 21:58）** 
+
+1.1 更新 **新增快速Adapter（2016/12/04 02:26）** 
 
 依赖库：[https://github.com/hongyangAndroid/baseAdapter](https://github.com/hongyangAndroid/baseAdapter)（看过源码觉得不错，推荐一下）
 

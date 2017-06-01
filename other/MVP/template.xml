@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="5"
+    name="MVP Tem"
+    minApi="9"
+    minBuildApi="14"
+    description="Creates a new empty activity">
+
+    <category value="MVP" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="presenter"
+        name="Presenter Name"
+        type="string"
+        default="Presenter"
+       />
+
+    <parameter
+        id="view"
+        name="View Name"
+        type="string"
+        default="View"
+       />
+    <parameter
+        id="model"
+        name="Model Name"
+        type="string"
+        default="Model"
+         />
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_blank_activity.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
