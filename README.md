@@ -22,7 +22,7 @@ Android Studio根目录\plugins\android\lib\templates\ 目录下。重启Android
 更新
 -
 
-1.2 更新 **新增MVP模板（2017/06/01 21:58）** 
+1.2 更新 **新增MVP模板（2017/06/01 21:58）**   
 
 1.1 更新 **新增快速Adapter（2016/12/04 02:26）** 
 
